@@ -206,7 +206,7 @@ Il manque encore une petite configuration. Notre application utilise un module p
 - Derrière **Commande de démarrage**, entrez `gunicorn -k uvicorn.workers.UvicornWorker`
 - Plus bas, dans les **Paramètres d'authentification**, sélectionnez **Authentification de base**.
   ![Activer authentification de base](./images/ActivateBasicAuth.png)
-- Enfin, cliquez sur **Enregistrer** pour vlider les modifications.
+- Enfin, cliquez sur **Enregistrer** pour valider les modifications.
   ![Comment configurer la commande de démarrage de l'application Web](./images/light/AppServiceStartupCommand.png)
 
 ### Déployer le code backend de Milligram sur Azure Web App via GitHub Actions
