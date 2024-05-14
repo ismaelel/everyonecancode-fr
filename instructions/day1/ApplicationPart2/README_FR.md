@@ -203,7 +203,10 @@ Il manque encore une petite configuration. Notre application utilise un module p
 
 - Naviguez vers **Configuration** sous **Paramètres**.
 - Sous l'onglet **Paramètres généraux**, vous devriez trouver les **Paramètres de la pile**. Pour notre backend, vous travaillez avec le langage de programmation Python - plus précisément Python 3.12.
-- Derrière **Commande de démarrage**, entrez `gunicorn -k uvicorn.workers.UvicornWorker` et cliquez sur **Enregistrer**.
+- Derrière **Commande de démarrage**, entrez `gunicorn -k uvicorn.workers.UvicornWorker`
+- Plus bas, dans les **Paramètres d'authentification**, sélectionnez **Authentification de base**.
+  ![Activer authentification de base](./images/ActivateBasicAuth.png)
+- Enfin, cliquez sur **Enregistrer** pour vlider les modifications.
   ![Comment configurer la commande de démarrage de l'application Web](./images/light/AppServiceStartupCommand.png)
 
 ### Déployer le code backend de Milligram sur Azure Web App via GitHub Actions
@@ -213,7 +216,9 @@ Pour que notre application de réseaux sociaux puisse réellement faire quelque 
 - Naviguez vers l'onglet **Centre de déploiement** sur le côté gauche de votre application Web dans le portail Azure.
 - Sous l'onglet **Paramètre**, sélectionnez **GitHub** comme **Source**.
 - Sous **Organization**, sélectionnez votre identifiant GitHub et sous **Repository**, sélectionnez votre depôt ainsi que la branche `main`.
-- Cliquez sur **Enregistrer**.
+- Sélectionnez ensuite l'authentification de base pour le déploiement
+  ![Utiliser authentification de base](./images/EnableBasicAuth.png)
+- Cliquez sur **Enregistrer** pour valider.
 
 Une fois que vous avez cliqué sur **Enregistrer**, le service crée automatiquement un fichier de workflow dans votre dépôt GitHub. Ce workflow est immédiatement exécuté et après environ 2 minutes, votre application web est prête. Vous pouvez également vérifier votre déploiement dans l'onglet "Actions" de votre dépôt. La couleur verte est toujours un bon signe.
 
