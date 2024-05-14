@@ -22,7 +22,7 @@ Aujourd'hui, vous allez apprendre comment :
 
 ## Créer une nouvelle branche dans votre projet
 
-Allez sur votre dépôt sur GitHub. Cliquez sur le menu déroulant "main" et tapez le nom de votre nouvelle branche (par exemple, Update-title-and-color). Cliquez sur 'Create branch : update-title-and-color' pour la créer.
+Allez sur votre dépôt sur GitHub. Cliquez sur le menu déroulant **main** et tapez le nom de votre nouvelle branche (par exemple, update-title-and-color). Cliquez sur **Create branch : update-title-and-color from main** pour la créer.
 
 ![Créer une nouvelle branche](./images/create-branch.png)
 
@@ -56,7 +56,7 @@ Cela devrait ressembler à ceci :
 
 Félicitations ! Vous venez de créer une nouvelle branche et de vous placer dessus avec succès. Maintenant, vous pouvez commencer à apporter des modifications à votre code !
 
-## Changer le titre et sa couleur de votre application
+## Changer le titre et sa couleur dans votre application
 
 Ouvrez le fichier `Home.vue` du dossier `frontend/src/views`. En haut, vous trouverez un élément appelé `<template>` qui décrit la structure de base de la page d'accueil. Vous pouvez changer le titre de l'application comme vous le souhaitez en changeant le texte entre les balises `<b-navbar-item>`.
 
@@ -97,7 +97,7 @@ Maintenant, exécutez d'abord `git add .` cela sélectionnera tous les fichiers 
 
 ## Ouvrir une "pull request" et la fusionner
 
-Retournez maintenant dans votre dépôt sur GitHub. Vous devriez voir un message indiquant que vous avez poussé votre branche. Cliquez sur le bouton **Compare & pull request** pour ouvrir une nouvelle pull request.
+Retournez maintenant dans votre dépôt sur GitHub. Vous devriez voir un message indiquant que vous avez poussé du code sur votre branche. Cliquez sur le bouton **Compare & pull request** pour ouvrir une nouvelle pull request.
 
 Pour rappel: Une pull request est une demande de fusion de vos modifications dans la branche principale. C'est une manière très populaire de travailler professionnellement avec d'autres développeurs sur un projet pour garantir la qualité du code.
 

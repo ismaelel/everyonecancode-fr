@@ -19,16 +19,16 @@ C'est génial de vous avoir ici ! 🎉
 
 **Construisez votre propre application de médias sociaux** - Si vous êtes orienté résultats et que vous voulez montrer une application de médias sociaux cool, restez ici dans ce dépôt ! Vous apprendrez comment déployer et configurer votre propre application. C'est une excellente façon de plonger directement dans le monde du développement de logiciels ! **[Cliquez ici pour jeter un coup d'œil à l'application exemple](https://microsoft.github.io/everyonecancode/)**
 
-Nous sommes ravis de faire partie de votre aventure de codage. Commençons ! 🚀
+Nous sommes ravis de faire partie de votre aventure de programmation. Commençons ! 🚀
 
 ## Agenda pour l'atelier EveryoneCanCode
 
-- Créez votre propre compte GitHub et fusionnez votre première demande d'extraction
-- Utilisez ce dépôt comme notre base
+- Créez votre propre compte GitHub et fusionnez votre première Pull Request
+- Utilisez ce dépôt comme votre base
 - Utilisez Azure Web Apps pour héberger votre propre application
 - Jouez avec l'interface utilisateur pour personnaliser votre application et comprendre le concept de base d'Azure
-- Utilisez des stockages et des bases de données pour stocker des images et des données
-- Utilisez Github Copilot pour apporter des modifications au code source
+- Utilisez des comptes de stockages et des bases de données pour stocker des images et des données
+- Utilisez GitHub Copilot pour apporter des modifications au code source plus rapidement
 
 Tous ces services Azure sont utilisés en arrière-plan et peuvent être consommés par notre application, alias application personnelle.
 
@@ -43,7 +43,7 @@ Pour information, tous les diplômés de Everyone Can Code sont invités à rejo
 
 Cet atelier se compose de plusieurs défis que vous devez relever. Vos formateurs vous guideront tout au long de l'atelier en vous donnant des introductions à chacun des sujets/défis que vous devez relever.
 
-Voici un aperçu de la semaine de formation. Bon hacking !
+Voici un aperçu de la formation. Bon hacking !
 
 ## Guide pratique
 
@@ -57,7 +57,7 @@ Voici un aperçu de la semaine de formation. Bon hacking !
 
 ## Objectif du programme *EveryoneCanCode* 
 
-L'objectif est de montrer à toutes les femmes de toutes les générations que tout est possible aussi dans le domaine de la technologie et d'allumer la passion pour la programmation. Nous visons à connecter toutes les générations de femmes, qu'elles soient élèves, étudiantes à l'université ou professionnelles déjà en poste. De plus, nous visons à connecter ces générations qui n'ont pas encore été en contact avec la technologie car nous avons remarqué qu'il y a un énorme fossé entre ces communautés. Nous pensons qu'il n'y a pas encore assez de héroïnes de la technologie.
+L'objectif est de montrer à toutes les femmes de toutes les générations que tout est possible aussi dans le domaine de la technologie et de découvrir la passion pour la programmation. Nous visons à connecter toutes les générations de femmes, qu'elles soient élèves, étudiantes à l'université ou professionnelles déjà en poste. De plus, nous visons à connecter ces générations qui n'ont pas encore été en contact avec la technologie car nous avons remarqué qu'il y a un énorme fossé entre ces communautés. Nous pensons qu'il n'y a pas encore assez de héroïnes de la technologie.
 
 Cependant, il est possible de se plonger dans la technologie à tout âge. Par conséquent, nous avons pensé à commencer par quelque chose que nous connaissons tous - les applications sur nos téléphones. Ensemble, nous construirons une application sur nos téléphones qui peut prendre des photos et à laquelle nous pouvons parler. Et pour le dire en d'autres termes (techniques) : _comment construire une application web progressive sur nos téléphones qui utilise des modèles de Machine Learning pré-entraînés comme points de terminaison restful_. L'application utilise des API REST (ne vous inquiétez pas, nous expliquerons ce terme plus tard) et nous utiliserons Azure pour relever les défis pour la faire fonctionner.
 

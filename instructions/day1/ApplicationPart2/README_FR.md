@@ -50,7 +50,7 @@ _Appuyer sur la pédale d'accélérateur déclenche une demande du frontend (pé
 
 ### Activer GitHub Actions
 
-Vous avez préparé une manière automatisée de créer et de mettre à jour le site web pour vous. Vous utiliserez deux des fonctionnalités géniales de GitHub. GitHub Pages et GitHub Actions. Commençons par les actions.
+Nous avons préparé une manière automatisée de créer et de mettre à jour le site web pour vous. Vous utiliserez deux des fonctionnalités géniales de GitHub: GitHub Pages et GitHub Actions. Commençons par les actions.
 
 - Allez dans l'onglet **Actions** de votre dépôt
 - Cliquez sur le bouton vert qui dit _I understand my workflows, go ahead and enable them_ pour activer GitHub Actions:
@@ -65,26 +65,28 @@ Assurez-vous que les Actions ont des permissions de lecture/écriture. Vérifiez
 - Dans l'onglet **Actions** de votre dépôt, cliquez sur le workflow **pages**.
 - Ouvrez le menu déroulant **Run workflow** et cliquez sur le bouton **Run workflow** pour confirmer l'exécution du workflow.
 
-Maintenant, observez comment le workflow est exécuté et jetez un œil aux étapes individuelles qui sont exécutées pour vous par GitHub.
+> Workflow: Dans GitHub Actions, un workflow est une suite d'actions (ou étapes) permettant de lancer d'exécuter des lignes de commandes de façon automatisé. Dans notre exemple nous utilisons ce mécanisme pour déployer automatiquement notre site.
+
+Maintenant, observez comment le workflow est exécuté et jetez un œil aux étapes individuelles qui sont exécutées pour vous par GitHub Actions.
 
 ![Exécuter le workflow](./images/FrontendRunWorkflow.png)
 
 ### Activer GitHub Pages dans les paramètres du projet
 
 Pour pouvoir afficher le site Web (frontend) que vous avez construit et déployé en utilisant GitHub Actions, vous devez activer GitHub Pages pour votre dépôt. GitHub Pages est une manière facile d'afficher un site Web (statique) lié à votre dépôt.
-Beaucoup de gens l'utilisent pour afficher la documentation de leurs projets. Vous l'utiliserons pour servir le frontend pour Milligram.
+Beaucoup de gens l'utilisent pour afficher la documentation de leurs projets. Vous l'utiliserez pour héberger le frontend pour Milligram.
 
 - Allez dans l'onglet **Settings** de votre dépôt-
   ![Paramètres du dépôt](./images/RepoSettingsTab.png)
 - Naviguez jusqu'à **Pages**, sélectionnez la branche _gh-pages_ et appuyez sur le bouton de sauvegarde.
   ![Activer Pages](./images/FrontendPagesUpdated.png)
-- Le déploiement prendra 1 à 2 minutes. Après cela, le site web de Milligram est accessible via `https://<votre nom d'utilisateur github>.github.io/everyonecancode/`.
+- Le déploiement prendra 1 à 2 minutes. Après cela, le site web de Milligram est accessible via `https://<votre nom d'utilisateur github>.github.io/everyonecancode-fr/`.
 
 Jetez un œil au site web. Essayez de changer le profil par votre nom de compte GitHub et voyez qu'il est stocké même si vous actualisez la page.
 
 ### Ouvrez la page GitHub sur votre téléphone
 
-Milligram est une petite application amusante similaire aux réseaux sociaux basés sur des photos que vous pourriez connaître. Bien sûr, vous voulez l'utiliser sur nos téléphones mobiles pour pouvoir utiliser
+Milligram est une petite application amusante similaire aux réseaux sociaux basés sur des photos que vous pourriez connaître. Bien sûr, vous pouvez l'utiliser sur vos téléphones mobiles pour pouvoir utiliser
 les caméras pour prendre des selfies et des photos géniales pour Milligram. Ses principales caractéristiques sont :
 
 - Afficher certaines informations de votre compte GitHub sur votre profil
@@ -115,7 +117,7 @@ Le backend de l'application recevra les photos téléchargées, les stockera pou
 
 Notre application peut être divisée en un frontend (quelque chose que vous voyez et qui s'exécute localement sur votre téléphone) et un backend (quelque chose qui traite vos informations et qui s'exécute sur un serveur). Dans ce cas, comme vous voulez créer notre propre application de réseaux sociaux, vous avez besoin de photos pour notre "Fil d'actualités". Cela signifie que vous avez besoin d'un endroit pour stocker de nombreux fichiers et d'un endroit pour exécuter notre logique d'application (qui est votre code).
 
-Pour stocker les fichiers, vous utiliserez un "Compte de stockage Azure" et pour exécuter notre application, vous utiliserez une "Application web Azure".
+Pour stocker les fichiers, vous utiliserez un "Compte de stockage Azure" et pour exécuter votre application, vous utiliserez une "Application web Azure".
 Tout d'abord, connectez-vous à votre Compte Azure.
 
 ### Se connecter à Azure
@@ -128,7 +130,7 @@ Tout d'abord, connectez-vous à votre Compte Azure.
 
 ### Créer un compte de stockage
 
-Notre compte de stockage est l'endroit où vous sauvegardez nos photos pour notre fil d'actualités.
+Votre compte de stockage est l'endroit où vous sauvegardez vos photos pour votre fil d'actualités.
 À l'intérieur du compte de stockage, vous utiliserez un [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/). 
 Tout comme le disque dur de votre ordinateur, le Blob Storage peut contenir une quantité massive de fichiers. Un point intéressant est que vous pouvez stocker autant de photos sur le compte de stockage que vous le souhaitez et vous n'avez pas à vous soucier de votre espace de stockage.
 
@@ -138,15 +140,15 @@ Tout comme le disque dur de votre ordinateur, le Blob Storage peut contenir une 
 
 - Allez à la page d'accueil du portail Azure.
 - Cliquez sur **+ Créer une ressource**.
-- Recherchez **Storage Account** et cliquez sur **Create**.
+- Recherchez **Storage Account** et cliquez sur **Créer**.
 - Sélectionnez votre abonnement et le groupe de ressources avec le nom que vous avez utilisé pour vous connecter au portail Azure.
 - Le nom de votre compte de stockage Azure doit être unique à l'échelle mondiale. Il doit également utiliser des petites lettres et aucun caractère spécial.
-- Assurez-vous de sélectionner `Standard` pour **Performance** et `Locally-redundant storage (LRS)` pour **Redundancy**.
+- Assurez-vous de sélectionner `Standard` pour **Performance** et `Locally-redundant storage (LRS)` pour **Redondance**.
   ![Storage](./images/light/BackendStorage1.png)
-- Cliquez sur _Review_ puis sur _Create_ pour terminer la création du compte de stockage.
-- Une fois le compte de stockage créé, il devrait y avoir un bouton _Go to resource_. Cliquez dessus.
-- Vous devriez maintenant voir votre compte de stockage. Sélectionnez _Containers_ sur le côté gauche.
-- Cliquez sur le bouton _New Container_ et créez un conteneur nommé `images`. Laissez tout dans les paramètres préconfigurés tels quels.
+- Cliquez sur **Vérifier** puis sur **créer** pour terminer la création du compte de stockage.
+- Une fois le compte de stockage créé, il devrait y avoir un bouton **Aller à la resource**. Cliquez dessus.
+- Vous devriez maintenant voir votre compte de stockage. Sélectionnez **Conteneur** sur le côté gauche.
+- Cliquez sur le bouton **Nouveau Conteneur** et créez un conteneur nommé **images**. Laissez tout dans les paramètres préconfigurés tels quels.
 
 C'est l'endroit où toutes les images téléchargées sur notre application Milligram seront stockées.
 
@@ -156,7 +158,7 @@ Notre [Azure Web App](https://learn.microsoft.com/en-us/azure/static-web-apps/) 
 
 - Retournez à la page d'accueil du portail Azure.
 - Cliquez sur **+ Créer une ressource** comme vous l'avez fait précédemment.
-- Recherchez **Web App** et cliquez sur **Create**.
+- Recherchez **Web App** et cliquez sur **Créer**.
 - Sélectionnez votre abonnement et votre groupe de ressources.
 - Assurez-vous d'ajuster les paramètres selon l'image ci-dessous :
   - Nom : `<choisissez votre propre nom unique>`
@@ -167,27 +169,29 @@ Notre [Azure Web App](https://learn.microsoft.com/en-us/azure/static-web-apps/) 
     ![backend 0](./images/light/BackendApp0.png)
 - Créez un nouveau plan de service App et `<choisissez votre propre nom>`.
   ![backend 1](./images/light/BackendApp1.png)
-- Dans le menu déroulant du plan tarifaire, sélectionnez **Free F1** qui est gratuit, sinon vous pourriez être facturé en créant un plan plus grand.
-- Cliquez sur **Review + Create** en bas de l'écran.
-- Revoyez les informations affichées et cliquez sur **Create** sur l'écran suivant pour lancer l'application backend.
+- Dans le menu déroulant du plan tarifaire, sélectionnez **Gratuit F1** qui est gratuit, sinon vous pourriez être facturé en créant un plan plus grand.
+- Cliquez sur **Vérifier + créer** en bas de l'écran.
+- Revoyez les informations affichées et cliquez sur **Créer** sur l'écran suivant pour lancer l'application backend.
 
-> 📝 Sur la page de révision, vous pouvez trouver des informations sur le coût estimé de votre service. Assurez-vous qu'il affiche **Estimated price - Free**"
+> 📝 Sur la page de révision, vous pouvez trouver des informations sur le coût estimé de votre service. Assurez-vous qu'il affiche **Prix estimé - Gratuit**"
 
 
 ### Intégrer le stockage et configurer l'application Web
 
 Maintenant, connectons notre application à notre stockage afin que vous puissiez prendre des photos sur votre téléphone et les stocker. Vous devez indiquer à l'application Web où elle peut trouver notre service de stockage. L'application peut prendre des configurations externes pour configurer la connexion au compte de stockage.
 
-- Pour cela, naviguez à nouveau vers votre _Storage account_. Vous devriez pouvoir le trouver via la barre de recherche en haut soit en recherchant son nom unique, soit simplement en recherchant le compte de stockage.
-- Sous **Access keys**, vous pouvez trouver la **Connection string** de notre compte de stockage. Cliquez sur le bouton **Show keys** pour pouvoir copier sa valeur, par exemple, dans un bloc-notes.
+- Pour cela, naviguez à nouveau vers votre **Storage account**. Vous devriez pouvoir le trouver via la barre de recherche en haut simplement en recherchant son nom unique.
+- Sous **Clés d'accès**, vous pouvez trouver la **Chaîne de connexion** de notre compte de stockage. Cliquez sur le bouton **Afficher** pour pouvoir copier sa valeur, par exemple, dans un bloc-notes.
   ![Capture d'écran de la page Access key dans le portail Azure](./images/light/SecretAccessKeys.png)
-- Revenez à l'application web et ouvrez l'onglet _Configuration_, cliquez sur _New connection string_ et créez une nouvelle chaîne de connexion avec les paramètres suivants :
+
+  Maintenant, retournez dans votre application web:
+- Revenez à l'application web et ouvrez l'onglet **Variables d’environnement**, cliquez sur **Chaînes de connexion** et créez une nouvelle chaîne de connexion avec les paramètres suivants :
   | Chaîne de connexion | Type | Valeur |
   |-|-|-|
   | `STORAGE` | Custom | `<collez votre chaîne de connexion (copiée plus tôt) du Storage Account>` |
-- Cliquez sur `ok` et `Save`.
-- Naviguez et descendez jusqu'à l'onglet **CORS** sur le côté gauche de votre service d'application et entrez `https://<YourGithubHandle>.github.io` sous _Allowed Origins_.
-- Cliquez à nouveau sur `Save`.
+- Cliquez sur **Ok** et **Enregistrer**.
+- Naviguez et descendez jusqu'à l'onglet **CORS** sur le côté gauche et entrez `https://<YourGithubHandle>.github.io` sous **Origines autorisées**.
+- Cliquez à nouveau sur **Enregistrer**.
 
 > CORS (Cross Origin Resource Sharing): Est une mesure de sécurité qui empèche le frontend d'un site web de communiquer avec le backend d'un autre sauf autorisation spéciale.
 
@@ -197,27 +201,32 @@ Maintenant, votre compte de stockage et votre application web sont correctement 
 
 Il manque encore une petite configuration. Notre application utilise un module prêt à l'emploi pour que les utilisateurs puissent interagir avec leur contenu. Mais ce module n'est pas encore installé. Pour qu'il soit installé, vous fournissez à l'application web une configuration qui est exécutée lorsque l'application est lancée, permettant aux utilisateurs d'interagir avec les données de notre application.
 
-- Naviguez vers **Configuration** sous _Settings_.
-- Sous l'onglet **General settings**, vous devriez trouver les **Stack settings**. Pour notre backend, vous travaillez avec le langage de programmation Python - plus précisément Python 3.12.
-- Derrière **Startup Command**, entrez `gunicorn -k uvicorn.workers.UvicornWorker` et cliquez sur **Save**.
+- Naviguez vers **Configuration** sous **Paramètres**.
+- Sous l'onglet **Paramètres généraux**, vous devriez trouver les **Paramètres de la pile**. Pour notre backend, vous travaillez avec le langage de programmation Python - plus précisément Python 3.12.
+- Derrière **Commande de démarrage**, entrez `gunicorn -k uvicorn.workers.UvicornWorker`
+- Plus bas, dans les **Paramètres d'authentification**, sélectionnez **Authentification de base**.
+  ![Activer authentification de base](./images/ActivateBasicAuth.png)
+- Enfin, cliquez sur **Enregistrer** pour valider les modifications.
   ![Comment configurer la commande de démarrage de l'application Web](./images/light/AppServiceStartupCommand.png)
 
 ### Déployer le code backend de Milligram sur Azure Web App via GitHub Actions
 
-Pour que notre application de réseaux sociaux puisse réellement faire quelque chose, vous devez amener notre code source sur l'application Web Azure. Pour ce faire, vous automatiserez ce "déploiement". Ainsi, vous n'avzez pas à compter sur un processus manuel chaque fois que vous voulez apporter des modifications (par exemple, changer le titre de l'application) à notre application et ainsi, vous évitez de nombreuses erreurs.
+Pour que notre application de réseaux sociaux puisse réellement faire quelque chose, vous devez amener votre code source sur l'application Web Azure. Pour ce faire, vous automatiserez ce "déploiement". Ainsi, vous n'avzez pas à compter sur un processus manuel chaque fois que vous voulez apporter des modifications (par exemple, changer le titre de l'application) à votre application et ainsi, vous éviterez de nombreuses erreurs.
 
-- Naviguez vers l'onglet _Deployment Center_ sur le côté gauche de votre application Web dans le portail Azure.
-- Sous l'onglet **Settings**, sélectionnez **GitHub** comme **Source** et cliquez sur **Authorize**.
+- Naviguez vers l'onglet **Centre de déploiement** sur le côté gauche de votre application Web dans le portail Azure.
+- Sous l'onglet **Paramètre**, sélectionnez **GitHub** comme **Source**.
 - Sous **Organization**, sélectionnez votre identifiant GitHub et sous **Repository**, sélectionnez votre depôt ainsi que la branche `main`.
-- Cliquez sur **Save**.
+- Sélectionnez ensuite l'authentification de base pour le déploiement
+  ![Utiliser authentification de base](./images/EnableBasicAuth.png)
+- Cliquez sur **Enregistrer** pour valider.
 
-Une fois que vous avez cliqué sur **Save**, le service crée automatiquement un fichier de workflow dans votre dépôt GitHub. Ce workflow est immédiatement exécuté et après environ 2 minutes, votre application web est prête. Vous pouvez également vérifier votre déploiement dans l'onglet "Actions" de votre dépôt. La couleur verte est toujours un bon signe.
+Une fois que vous avez cliqué sur **Enregistrer**, le service crée automatiquement un fichier de workflow dans votre dépôt GitHub. Ce workflow est immédiatement exécuté et après environ 2 minutes, votre application web est prête. Vous pouvez également vérifier votre déploiement dans l'onglet "Actions" de votre dépôt. La couleur verte est toujours un bon signe.
 
 ### Vérifiez si l'application Milligram fonctionne correctement
 
 Faisons une pause. Pour vous assurer que vous êtes sur la bonne voie, testez si le frontend de votre application obtient une réponse de votre service backend. Avant de tout rassembler, vous devez vous assurer que le service backend fonctionne comme prévu.
 
-- Naviguez vers l'onglet **Overview** sur le côté gauche du Web App Service.
+- Naviguez vers l'onglet **Vue d'ensemble** sur le côté gauche du Web App Service.
   ![URL du service d'application](./images/light/AppServicesDocLink.png)
 - Cliquez sur Domaine par défaut, ajoutez `/docs` à la fin, puis testez le site Web en utilisant la documentation interactive pour déterminer si les fonctionnalités de notre Milligram fonctionnent.
 - Dans votre navigateur, vous aurez la vue suivante :
@@ -237,7 +246,7 @@ D'abord, vous avez déployé le frontend (interface utilisateur) de notre applic
 
 Vous avez créé une ressource de stockage, elle est responsable du stockage de vos images. Ensuite, vous avez créé une ressource d'application Web, ici vous exécuterez votre logique de serveur. La logique du serveur est écrite en Python en utilisant un framework (boite à outil) appelé FastAPI. Le code de la logique du serveur est hébergé dans le dépôt GitHub de everyonecancode. 
 
-Vous avez connecté l'application web au dépôt GitHub et vous avez demandé au serveur d'exécuter une commande spécifique lors du démarrage de l'application web. Cette commande commencera à exécuter notre logique de serveur, c'est pourquoi vous pouvez voir les docs dans votre navigateur sous `/docs`. Ensuite, vous essaierez de connecter le Frontend au Backend.
+Vous avez connecté l'application web au dépôt GitHub et vous avez demandé au serveur d'exécuter une commande spécifique lors du démarrage de l'application web. Cette commande commencera à exécuter notre logique de serveur, c'est pourquoi vous pouvez voir les docs dans votre navigateur sous `/docs`. Maintenant, vous allez essayer de connecter le Frontend au Backend.
 
 ### Intégrer l'URL de l'application web Azure dans les secrets de GitHub
 
